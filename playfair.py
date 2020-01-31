@@ -1,6 +1,6 @@
 string = "BALLOON" 
 
-key = "AHMED"
+key = "MONARCHY"
 
 alphabet = iter( [chr(i) for i in range(65, 91) if chr(i) not in key and chr(i) != "J"])
 
