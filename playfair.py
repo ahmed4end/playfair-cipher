@@ -27,13 +27,13 @@ result = []
 for i in chunks:
 	x, y = i[0], i[1]
 	p1, p2 = ds(x), ds(y) #coordinates of the two letter in the mat.
-	if ds(x)[1] == ds(y)[1]:
+	if ds(x)[1] == ds(y)[1]:   #same column case.
 		x, y= mat[(p1[0]+1, p1[1])], mat[(p2[0]+1, p2[1])]
 		result += [x, y]
-	elif ds(x)[0] == ds(y)[0]:
+	elif ds(x)[0] == ds(y)[0]: #same row case.
 		x, y= mat[(p1[0], p1[1]+1)], mat[(p2[0], p2[1]+1)]
 		result += [x, y]
-	else:
+	else:                      #different column and row case.
 		x, y= mat[(p1[0], p2[1])], mat[(p2[0], p1[1])]
 		result += [x, y]
 print("".join(result))
