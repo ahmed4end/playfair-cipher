@@ -2,7 +2,7 @@ string = "BALLOON"
 
 key = "MONARCHY"
 
-alphabet = iter( [chr(i) for i in range(65, 91) if chr(i) not in key and chr(i) != "J"])
+alphabet = iter([chr(i) for i in range(65, 91) if chr(i) not in key and chr(i) != "J"])
 
 #### i used dictionary to put the matrix each letter as a value holds coordinates as a key in dictionary  ex: {(0,0): 'M', ect...} ####
 mat = {(i, j):((lambda x: list(key)[x] if x<len(key) else next(alphabet))(j+i*5)) for i in range(5) for j in range(5)}
